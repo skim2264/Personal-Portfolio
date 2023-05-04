@@ -1,0 +1,50 @@
+
+/* App Div */
+.app-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Projects */
+#projects-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 100vw;
+}
+
+.projectcard-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-img {
+  max-width: 200px;
+  max-height: 300px;
+}
+
+.project-title {
+  position: absolute;
+}
+
+.greyout {
+  opacity: 50%;
+}
+
+/* Project Popup */
+#project-popup-div {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: 1px solid black;
+  background-color: white;
+}
+
+.popup-img {
+  max-width: 300px;
+  max-height: 400px;
+}

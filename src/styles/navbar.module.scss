@@ -1,0 +1,24 @@
+.navbarDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px;
+  backdrop-filter: blur(8px) brightness(90%);
+  position: sticky;
+  top: 0;
+}
+
+.navbarLeft {
+  display: flex;
+  padding-left: 40px;
+}
+
+.navbarRight {
+  display: flex;
+  gap: 20px;
+  padding-right: 40px;
+}
+
+a {
+  text-decoration: none;
+}

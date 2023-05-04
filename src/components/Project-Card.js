@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import ProjectPopup from "./Project-popup";
+import styles from "../styles/projects.module.scss";
 
 const ProjectCard = (props) => {
   const {project} = props;
@@ -17,10 +18,10 @@ const ProjectCard = (props) => {
   };
 
   return (
-    <div className="projectcard-div">
-      <img className="project-img" src={project.img} alt={project.title} onMouseEnter={toggleTitle} onMouseLeave={toggleTitle} onClick={displayProject}></img>
+    <div className={styles.projectCardDiv}>
+      <img className={styles.projectImg} src={project.img} alt={project.title} onMouseEnter={toggleTitle} onMouseLeave={toggleTitle} onClick={displayProject}></img>
       {hovered
-        ? <h3 className="project-title">{project.title}</h3>
+        ? <h3 className={styles.projectTitle}>{project.title}</h3>
         : null
       }
       {clicked

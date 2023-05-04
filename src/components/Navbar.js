@@ -9,10 +9,10 @@ const Navbar = (props) => {
         <img src="" alt="logo"></img>
       </div>
       <div className={styles.navbarRight}>
-        <a href="">About</a>
-        <a href="">Skills</a>
-        <a href="">Projects</a>
-        <a href="">Contact Me</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact Me</a>
       </div>
     </nav>
   )

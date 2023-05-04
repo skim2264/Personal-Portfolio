@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from "react";
+import backgroundImg from "../assets/aboutBackground.jpg";
+import styles from "../styles/about.module.scss";
 
-const About = (props) => {
+const About = () => {
 
   return (
-    <div id="about-div">
-
+    <div id="about">
+      <img src={backgroundImg} alt="A mountain" className={styles.backgroundImg}></img>
     </div>
   )
 };

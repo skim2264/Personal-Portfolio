@@ -1,7 +1,14 @@
+h1 {
+  font-size: 40px;
+}
+
 .skillsContainerDiv {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   text-align: center;
+  justify-content: center;
 }
 
 .skillsDiv {

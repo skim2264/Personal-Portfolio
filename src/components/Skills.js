@@ -14,7 +14,7 @@ const Skills = () => {
   return (
     <div id="skills" className={styles.skillsContainerDiv}>
       <div>
-        <h2>Skills</h2>
+        <h1>Skills</h1>
       </div>
       <div className={styles.skillsDiv}>
         <div className={styles.skillSection}>

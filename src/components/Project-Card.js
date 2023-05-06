@@ -9,7 +9,6 @@ const ProjectCard = (props) => {
   const [clicked, setClicked] = useState(false);
 
   const toggleTitle = (e) => {
-    e.target.classList.toggle("greyout");
     setHovered(!hovered);
   };
 
@@ -19,13 +18,13 @@ const ProjectCard = (props) => {
 
   return (
     <div className={styles.projectCardDiv}>
-      <img className={styles.projectImg} src={project.img} alt={project.title} onMouseEnter={toggleTitle} onMouseLeave={toggleTitle} onClick={displayProject}></img>
+      <img className={hovered ? `${styles.greyout} ${styles.projectImg}` : styles.projectImg} src={project.img} alt={project.title} onMouseEnter={toggleTitle} onMouseLeave={toggleTitle} onClick={displayProject}></img>
       {hovered
         ? <h3 className={styles.projectTitle}>{project.title}</h3>
         : null
       }
       {clicked
-        ? <ProjectPopup project={project}></ProjectPopup>
+        ? <ProjectPopup project={project} setClicked={setClicked}></ProjectPopup>
         : null
       }
     </div>

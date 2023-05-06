@@ -1,0 +1,20 @@
+.skillsContainerDiv {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.skillsDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.skillSection {
+  font-size: 20px;
+}
+
+.skillIcon {
+  width: 20px;
+  filter: grayscale(100%);
+}

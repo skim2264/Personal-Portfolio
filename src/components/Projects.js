@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <div id="projects" className={styles.projectsDiv}>
       {myProjects.map((project) => {
-        return <ProjectCard project={project}></ProjectCard>
+        return <ProjectCard project={project} key={project.title}></ProjectCard>
       })}
     </div>
   )

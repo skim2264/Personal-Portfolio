@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import backgroundImg from "../assets/aboutBackground.jpg";
 import styles from "../styles/about.module.scss";
 

@@ -1,5 +1,60 @@
-.backgroundImg {
-  object-fit: cover;
+.aboutDiv {
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.aboutMain {
+  background-image: url("../assets/aboutBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20%;
+}
+
+.typewriter p {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+}
+
+.typewriter p:first-child {
+  opacity: 0;
+  animation: 
+    typing 3.5s steps(40, end);
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+.typewriter p:nth-child(2) {
+  opacity: 0;
+  animation: 
+    typinglast 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  animation-delay: 6.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes typing {
+  0% {width:0}
+  1% {opacity: 1}
+  99.9% {border-right: .15em solid orange}
+  to {width: 100%; opacity: 1; border: none;}
+}
+
+@keyframes typinglast {
+  0% {width:0}
+  1% {opacity: 1}
+  to {width: 100%; opacity: 1; border-right: .15em solid orange}
+}
+
+@keyframes blink-caret {
+  0% {border-color: transparent}
+  50% {border-color: orange;}
 }

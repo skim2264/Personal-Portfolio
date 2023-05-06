@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import ProjectCard from "./Project-Card";
 import { myProjects } from "../assets/projectsIndex";
 import styles from "../styles/projects.module.scss";

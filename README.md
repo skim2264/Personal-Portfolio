@@ -1,3 +1,16 @@
+# Personal Portfolio
+
+Personal Portfolio from the [Odin Project's](https://www.theodinproject.com/) curriculum.
+
+[Live Demo](https://skim2264.github.io/Personal-Portfolio/)
+
+## Built with
+
+- React
+- SCSS
+- HTML
+- Javascript
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

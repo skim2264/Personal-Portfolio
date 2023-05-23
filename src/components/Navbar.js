@@ -6,7 +6,7 @@ const Navbar = (props) => {
   return (
     <nav id="navbar" className={styles.navbarDiv}>
       <div className={styles.navbarLeft}>
-        <img src="" alt="logo"></img>
+        <a href="/" className={styles.logo}>Soojin Kim</a>
       </div>
       <div className={styles.navbarRight}>
         <a href="#about">About</a>

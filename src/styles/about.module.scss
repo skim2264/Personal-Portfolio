@@ -27,7 +27,7 @@
 .typewriter p:first-child {
   opacity: 0;
   animation: 
-    typing 3.5s steps(40, end);
+    typing 2.5s steps(40, end);
   animation-fill-mode: forwards;
   animation-delay: 3s;
 }
@@ -35,9 +35,9 @@
 .typewriter p:nth-child(2) {
   opacity: 0;
   animation: 
-    typinglast 3.5s steps(40, end),
+    typinglast 2.5s steps(40, end),
     blink-caret .75s step-end infinite;
-  animation-delay: 6.5s;
+  animation-delay: 5.5s;
   animation-fill-mode: forwards;
 }
 

@@ -1,37 +1,53 @@
 /* Projects */
 .projectsDiv {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 90px;
+  padding-top: 130px;
 }
 
-.projectCards {
-  display: flex;
-  gap: 20px 40px;
-  flex-wrap: wrap;
-  margin: 0px 40px;
-  justify-content: center;
+.projectHeader {
+  margin-bottom: 30px;
 }
 
-.projectCardDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+/* Project Card */
 .projectImg {
-  max-width: 200px;
-  max-height: 300px;
+  height: 500px;
+  object-fit: contain;
 }
 
-.projectTitle {
-  position: absolute;
+.popupLink {
+  height: 40px;
 }
 
-.greyout {
-  opacity: 50%;
+.carouselContainer {
+  width: 100%;
+  padding: 40px 0px;
+}
+
+.card {
+  width: 320px;
+  border-radius: 25px;
+  background-color: #FFF;
+}
+
+.imageContent, .cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+.cardImage {
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+
+.cardImage, .cardImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

@@ -18,7 +18,7 @@ const Skills = () => {
       </div>
       <div className={styles.skillsDiv}>
         <div className={styles.skillSection}>
-          <h2>Front-End</h2>
+          <h2 className={styles.skillHeader}>Front-End</h2>
           <div className="iconDiv">
             <FontAwesomeIcon icon={icon({name:'js', style:'brands'})}></FontAwesomeIcon>
             <p>Javascript</p>
@@ -37,7 +37,7 @@ const Skills = () => {
           </div>
         </div>
         <div className={styles.skillSection}>
-          <h2>Back-End</h2>
+          <h2 className={styles.skillHeader}>Back-End</h2>
           <div className="iconDiv">
             <FontAwesomeIcon icon={icon({name:'node-js', style:'brands'})}></FontAwesomeIcon>
             <p>NodeJS</p>
@@ -64,7 +64,7 @@ const Skills = () => {
           </div>
         </div>
         <div className={styles.skillSection}>
-          <h2>Miscellaneous</h2>
+          <h2 className={styles.skillHeader}>Miscellaneous</h2>
           <div className="iconDiv">
             <FontAwesomeIcon icon={icon({name:'git-alt', style:'brands'})}></FontAwesomeIcon>
             <p>Git</p>

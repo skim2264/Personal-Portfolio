@@ -10,7 +10,7 @@ h1 {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  justify-content: center;
+  padding-top: 110px;
 }
 
 .skillsDiv {
@@ -32,4 +32,18 @@ h1 {
 .skillIcon {
   width: 20px;
   filter: grayscale(100%);
+}
+
+/* For mobile screens*/
+@media only screen and (max-width:600px) {
+  h1 {
+    font-size: 30px;
+  }
+  .skillHeader {
+    font-size: 20px;
+  }
+
+  .skillSection {
+    font-size: 15px;
+  }
 }

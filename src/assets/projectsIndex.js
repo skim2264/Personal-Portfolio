@@ -19,7 +19,7 @@ export const myProjects = [
     title: "Members' Only",
     img: membersOnly,
     github: "https://github.com/skim2264/Members-Only",
-    demo: "https://members-only-production-96aa.up.railway.app/",
+    demo: "https://members-only-clubhouse.up.railway.app/",
     description: "An exclusive clubhouse for only members to write and read anonymous posts"
   },
   {

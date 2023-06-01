@@ -34,19 +34,19 @@ const Projects = () => {
       >
         {myProjects.map((project) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={project.title}>
               <div className={styles.card}>
                 <div className={styles.imageContent}>
-                  <div className={styles.cardImage}>
-                    <img src={project.img} alt={project.title} className={styles.cardImg}></img>
-                  </div>
+                  <img src={project.img} alt={project.title} className={styles.cardImg}></img>
                 </div>
 
                 <div className={styles.cardContent}>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
-                  <a href={project.github} target="_blank" rel="noreferrer" className={styles.popupLink}>Github <FontAwesomeIcon icon={icon({name:"arrow-up-right-from-square"})} /></a>
-                  <a href={project.demo} target="_blank" rel="noreferrer" className={styles.popupLink}>Demo <FontAwesomeIcon icon={icon({name:"arrow-up-right-from-square"})} /></a>
+                  <div className={styles.popupLinks}>
+                    <a href={project.github} target="_blank" rel="noreferrer" className={styles.popupLink}>Github <FontAwesomeIcon icon={icon({name:"arrow-up-right-from-square"})} /></a>
+                    <a href={project.demo} target="_blank" rel="noreferrer" className={styles.popupLink}>Demo <FontAwesomeIcon icon={icon({name:"arrow-up-right-from-square"})} /></a>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>

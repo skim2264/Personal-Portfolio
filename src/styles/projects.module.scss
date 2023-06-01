@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 130px;
+  padding-top: 110px;
 }
 
 .projectHeader {
@@ -18,23 +18,9 @@
   object-fit: contain;
 }
 
-.popupLink {
-  height: 40px;
-}
-
-.popupLink:hover {
-  color: orange;
-}
-
-.carouselContainer {
-  width: 100%;
-  padding: 40px 0px;
-}
-
 .card {
   width: 320px;
-  border-radius: 25px;
-  background-color: #FFF;
+  margin-bottom: 30px;
 }
 
 .imageContent, .cardContent {
@@ -44,14 +30,28 @@
   padding: 10px 14px;
 }
 
-.cardImage {
-  position: relative;
-  height: 150px;
-  width: 150px;
-}
-
 .cardImage, .cardImg {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.popupLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.popupLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 40px;
+  width: 100px;
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.popupLink:hover {
+  color: white;
 }

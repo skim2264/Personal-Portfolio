@@ -6,8 +6,16 @@ import todolist from "./todolist.png";
 import library from "./library.png";
 import memory from "./memory.png";
 import calculator from "./calculator.png";
+import blog from "./blog.png";
 
 export const myProjects = [
+  {
+    title: "Blog API",
+    img: blog,
+    github: "https://github.com/skim2264/Blog-Client",
+    demo: "https://skim2264.github.io/Blog-CMS/",
+    description: "A blog using an API backend with 2 different front-ends for accessing and editing posts."
+  },
   {
     title: "Where's Waldo",
     img: whereswaldo,

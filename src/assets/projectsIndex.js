@@ -12,8 +12,8 @@ export const myProjects = [
   {
     title: "Blog API",
     img: blog,
-    github: "https://github.com/skim2264/Blog-Client",
-    demo: "https://skim2264.github.io/Blog-CMS/",
+    github: "https://github.com/skim2264/Blog_Client",
+    demo: "https://skim2264.github.io/Blog_Client/",
     description: "A blog using an API backend with 2 different front-ends for accessing and editing posts."
   },
   {

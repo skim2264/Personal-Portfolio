@@ -26,6 +26,11 @@ const Contact = () => {
         <p>Github</p>
         <FontAwesomeIcon icon={icon({name:"arrow-up-right-from-square"})} />
       </a>
+      <a href="https://flowcv.com/resume/9j5rnwqsng" className={styles.contactLink} target="_blank" rel="noreferrer">
+        <FontAwesomeIcon icon={icon({name:"file"})} />
+        <p>Resume</p>
+        <FontAwesomeIcon icon={icon({name:"arrow-up-right-from-square"})} />
+      </a>
       
     </div>
   )

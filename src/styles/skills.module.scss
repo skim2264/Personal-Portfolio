@@ -1,16 +1,13 @@
 @use "variables";
+@use "templates";
 
 h1 {
   font-size: 40px;
 }
 
 .skillsContainerDiv {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
+  @extend %sectionDivTemplate;
   height: 100vh;
-  text-align: center;
-  padding-top: 110px;
 }
 
 .skillsDiv {
@@ -33,6 +30,21 @@ h1 {
   width: 20px;
   filter: grayscale(100%);
 }
+
+.skillOtherDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* For mobile screens*/
 @media only screen and (max-width:600px) {

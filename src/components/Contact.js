@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 import styles from "../styles/contact.module.scss";
 
 const Contact = () => {
+
+  useEffect(() => { 
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const links = document.querySelectorAll(`.${styles.contactLink}`);
+
+      links.forEach(link => {
+        const linkPosition = link.offsetTop;
+        if (linkPosition < scrollPosition) {
+          link.classList.add(styles.animate);
+        }
+      })
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
 
   return (
     <div id="contact" className={styles.contactDiv}>

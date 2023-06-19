@@ -1,3 +1,5 @@
+@use "./styles/variables";
+
 body, html, #root {
   margin: 0;
   padding: 0;
@@ -11,3 +13,48 @@ body, html, #root {
   justify-content: center;
 }
 
+/* Scroll up button */
+.scrollTopDiv {
+  position: fixed;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  animation: bounce 1s infinite alternate;
+
+  p {
+    margin: 8px;
+    font-size: 14px;
+  }
+}
+
+.scrollTopButton {
+  width: 30px;
+  height: 30px;
+  background-color: variables.$highlight-color;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+}
+
+.scrollTopButton:hover {
+  background-color: white;
+  color: black;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

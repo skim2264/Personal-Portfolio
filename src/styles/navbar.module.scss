@@ -1,5 +1,10 @@
-.navbarDiv {
+%navbar-shared {
   display: flex;
+  align-items: center;
+}
+
+.navbarDiv {
+  @extend %navbar-shared;
   justify-content: space-between;
   width: 100%;
   padding: 30px 0px;
@@ -11,17 +16,15 @@
 }
 
 .navbarLeft {
-  display: flex;
+  @extend %navbar-shared;
   padding-left: 40px;
-  align-items: center;
   margin-left: 10px;
 }
 
 .navbarRight {
-  display: flex;
+  @extend %navbar-shared;
   gap: 20px;
   padding-right: 40px;
-  align-items: center;
   margin-right: 10px;
 }
 
@@ -31,13 +34,25 @@ a {
   color: black;
 }
 
+.navLink {
+  transition: color 0.3s, text-shadow 0.3s, font-weight 0.3s;
+}
+
 .navLink:hover {
   border-bottom: 2px solid orange;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 .logo {
   font-family: 'Abril Fatface', cursive;
   font-size: 40px;
+  transition: color 0.3s, text-shadow 0.3s, font-weight 0.3s;
+}
+
+.logo:hover {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 /* For mobile screens*/

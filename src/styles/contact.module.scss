@@ -11,8 +11,31 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.contactDiv a:nth-child(odd) {
+  transform: translateX(100px);
+}
+
+.contactDiv a:nth-child(even) {
+  transform: translateX(-100px);
 }
 
 .contactLink:hover {
   color: orange;
+  animation: bounce 0.5;
+  animation-fill-mode: forwards;
+}
+
+.contactDiv a.animate {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+@keyframes bounce {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
 }

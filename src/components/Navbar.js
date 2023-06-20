@@ -9,10 +9,10 @@ const Navbar = () => {
         <a href="/Personal-Portfolio" className={styles.logo}>Soojin Kim</a>
       </div>
       <div className={styles.navbarRight}>
-        <a href="#about" className={styles.navLink}>About</a>|
-        <a href="#skills" className={styles.navLink}>Skills</a>|
-        <a href="#projects" className={styles.navLink}>Projects</a>|
-        <a href="#contact" className={styles.navLink}>Contact Me</a>
+        <a href="#about" className={styles.navLink}>&lt;About/&gt;</a>
+        <a href="#skills" className={styles.navLink}>&lt;Skills/&gt;</a>
+        <a href="#projects" className={styles.navLink}>&lt;Projects/&gt;</a>
+        <a href="#contact" className={styles.navLink}>&lt;Contact/&gt;</a>
       </div>
     </nav>
   )

@@ -5,7 +5,7 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Home from './components/Home';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import About from './components/About';import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
     <div className="app-div">
       <Navbar></Navbar>
       <Home></Home>
+      <About></About>
       <Skills></Skills>
       <Projects></Projects>
       <Contact></Contact>

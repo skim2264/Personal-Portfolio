@@ -1,6 +1,27 @@
 @use "templates";
+@use "variables";
 
 .aboutDiv {
   @extend %sectionDivTemplate;
   height: 100vh;
+}
+
+.aboutMain {
+  display: flex;
+}
+
+.blurb {
+  width: 65%;
+  margin: 50px;
+  padding: 20px;
+  border: 1px solid black;
+  box-shadow: 19px 19px 2px 2px variables.$highlight-color,0px 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
+.interests {
+  width: 35%;
+  margin: 50px;
+  background-color: variables.$highlight-color;
+  padding: 20px;
+  border-radius: 5px;
 }

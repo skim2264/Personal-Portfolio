@@ -1,7 +1,9 @@
+@use "variables";
+
 .contactDiv {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   align-items: center;
   justify-content: center;
@@ -24,7 +26,7 @@
 }
 
 .contactLink:hover {
-  color: orange;
+  color: variables.$highlight-color;
   animation: bounce 0.5;
   animation-fill-mode: forwards;
 }

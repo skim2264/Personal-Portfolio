@@ -1,6 +1,8 @@
 @use "variables";
+@use "templates";
 
 .footerDiv {
+  @extend %centerTemplate;
   p {
     font-size: 22px;
     font-weight: 300;

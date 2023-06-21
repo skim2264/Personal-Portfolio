@@ -10,6 +10,8 @@ body, html, #root {
 
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
 }
 
 a {
@@ -23,10 +25,6 @@ p {
 
 /* App Div */
 .app-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-family: variables.$main-font;
 }
 

@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 function App() {
+  //top button appears on scroll
   const [visible, setVisible] = useState(false);
 
   const toggleVisible = () => {
@@ -30,6 +31,7 @@ function App() {
 
   window.addEventListener('scroll', toggleVisible);
 
+  //background glows behind cursor
   const containerRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 

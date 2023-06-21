@@ -150,6 +150,8 @@
     }
 
     .typewriter {
+      margin-left: 0;
+
       p:first-child {
         animation: 2s linear slideinOne;
       }

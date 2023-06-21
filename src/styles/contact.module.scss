@@ -59,6 +59,9 @@
     }
 
     a {
+      p {
+        font-size: variables.$mobile-p;
+      }
       font-size: variables.$mobile-p;
     }
   }

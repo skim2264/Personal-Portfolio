@@ -73,10 +73,12 @@
   .aboutDiv {
     display: flex;
     flex-direction: column;
+    margin-bottom: 250px;
 
     h1 {
       font-size: variables.$mobile-h1;
       padding-left: variables.$mobile-h1;
+      margin-top: 0px;
     }
   
     p {
@@ -85,9 +87,14 @@
     }
 
 
-    .interests > ul {
-      flex-direction: column;
-      gap: 30px;
+    .interests {
+      ul {
+        flex-direction: column;
+        gap: 30px;
+        li {
+          font-size: variables.$mobile-p;
+        }
+      }
     }
   }
 }

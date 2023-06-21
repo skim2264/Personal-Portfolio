@@ -12,42 +12,44 @@ h1 {
 
   h1 {
     font-size: 60px;
+    margin-bottom: 80px;
+    color: lighten(variables.$highlight-color, 10%);
+    
   }
 }
 
 .skillsDiv {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-
-.skillSection {
   font-size: 20px;
-  width: 250px;
-}
-
-.skillHeader {
-  padding: 10px;
-  font-size: 36px;
-  position: relative;
-  display: inline-block;
-}
-
-/* Add a pseudo-element ::after to create the glowing effect */
-.skillHeader::after {
-  content: "";
-  position: absolute;
-  bottom: -2px; /* Adjust the value to control the position of the glowing border */
-  left: 0;
-  width: 100%;
-  height: 2px; /* Adjust the height of the glowing border */
-  background-color: variables.$second-highlight-color; /* Adjust the color of the glowing border */
-  box-shadow: 0 0 5px 2px variables.$second-highlight-color; /* Adjust the glow effect properties */
+  gap: 50px;
+  padding: 0px 10%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%/3, max(100px, 100%/6)), 1fr));
 }
 
 .skillIcon {
-  width: 20px;
+  width: 50px;
   filter: brightness(0) invert(1);
+}
+
+.skillName {
+  display: none;
+}
+
+.iconDiv {
+  @extend %centerTemplate;
+  flex-direction: column;
+}
+
+.iconDiv:hover {
+  .skillName {
+    display: flex;
+    position: absolute;
+    text-shadow: 1px black;
+    font-weight: 100;
+  }
+  .skillIcon {
+    opacity: 0.3;
+  }
 }
 
 .skillOtherDiv {
@@ -62,15 +64,35 @@ h1 {
 
 
 /* For mobile screens*/
-@media only screen and (max-width:600px) {
-  h1 {
-    font-size: 30px;
-  }
-  .skillHeader {
-    font-size: 20px;
+@media only screen and (max-width:640px) {
+  .skillsContainerDiv {
+    h1 {
+      font-size: variables.$mobile-h1;
+    }
+    .iconDiv:hover {
+      .skillName {
+        display: flex;
+        position: relative;
+      }
+      .skillIcon {
+        opacity: 1;
+      }
+    }
+    .skillName {
+      display: flex;
+      text-shadow: 1px black;
+      font-weight: 100;
+      margin: 0px;
+      margin-top: 5px;
+      font-size: 20px;
+    }
+    .skillIcon {
+      font-size: 40px;
+      width: 40px;
+    }
   }
 
-  .skillSection {
-    font-size: 15px;
+  .skillsDiv {
+    gap: 25px;
   }
 }

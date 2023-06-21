@@ -2,15 +2,21 @@
 @use "variables";
 
 .aboutDiv {
-  @extend %centerTemplate;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  width: 100%;
   height: 100vh;
   background-color: black;
   color: white;
-  padding-left: 80px;
+  padding-left: 10%;
+  padding-top: 110px;
   
   h1 {
     font-size: 60px;
     width: 100%;
+    color: lighten(variables.$highlight-color, 10%);
+    padding-right: 50px;
   }
 }
 
@@ -19,12 +25,12 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  padding-right: 100px;
+  padding-right: 10%;
+  padding-left: 10%;
+  border-left: 1px solid grey;
 }
 
 .blurb {
-  //border: 1px solid black;
-  //box-shadow: 19px 19px 2px 2px variables.$highlight-color,0px 0px 1px 0px rgba(0, 0, 0, 0.5);
   animation: 3s linear slideinOne;
   text-align: justify;
   margin-bottom: 20px;
@@ -58,6 +64,30 @@
       .blueIcon {
         filter: hue-rotate(50deg);
       }
+    }
+  }
+}
+
+/* For mobile screens*/
+@media only screen and (max-width:640px) {
+  .aboutDiv {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: variables.$mobile-h1;
+      padding-left: variables.$mobile-h1;
+    }
+  
+    p {
+      font-size: variables.$mobile-p;
+      font-weight: 300;
+    }
+
+
+    .interests > ul {
+      flex-direction: column;
+      gap: 30px;
     }
   }
 }

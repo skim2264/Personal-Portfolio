@@ -36,3 +36,10 @@
 .mySwiper {
   --swiper-navigation-color: rgb(124, 124, 124);
 }
+
+/* For mobile screens*/
+@media only screen and (max-width:800px) {
+  .swiper-slide {
+    margin: 0px;
+  }
+}

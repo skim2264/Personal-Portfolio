@@ -11,6 +11,8 @@
 
 .projectHeader {
   margin-bottom: 50px;
+  font-size: 60px;
+  color: lighten(variables.$highlight-color, 10%);
 }
 
 /* Project Card */
@@ -59,4 +61,29 @@
 
 .popupLink:hover {
   color: white;
+}
+
+/* For mobile screens*/
+@media only screen and (max-width:800px) {
+  .projectsDiv {
+    h1 {
+      font-size: variables.$mobile-h1;
+    }
+
+    p {
+      font-size: variables.$mobile-p;
+    }
+    .card {
+      flex-direction: column;
+      max-width: 300px;
+      margin-bottom: 0px;
+      h3 {
+        margin: 0px;
+      }
+      p {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }

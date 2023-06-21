@@ -29,11 +29,6 @@
   transition: filter 0.3s ease-in-out;
 }
 
-//blur background image on scroll
-// .blurred {
-//   filter: blur(10px);
-// }
-
 //typing animation
 .typewriter {
   color: black;
@@ -140,5 +135,56 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+/* For mobile screens*/
+@media only screen and (max-width:640px) {
+  .homeDiv {
+    h1 {
+      font-size: 50px;
+    }
+  
+    p {
+      font-size: variables.$mobile-p;
+    }
+
+    .typewriter {
+      p:first-child {
+        animation: 2s linear slideinOne;
+      }
+    
+      h1 {
+        animation: 3s linear slideinTwo;
+      }
+      p:nth-child(4) {
+        animation: 5s linear slideinThree;
+      }
+    }
+
+    .typingText {
+      animation-delay: 2s;
+    }
+
+    .line {
+      animation-delay: 5s;
+    }
+    @keyframes slideinTwo {
+      from {
+        transform: (translateX(-150vw));
+      } 
+      60% {
+        transform: (translateX(0));
+      }
+    }
+
+    @keyframes slideinThree {
+      from {
+        transform: (translateX(-400vw));
+      } 
+      90% {
+        transform: (translateX(0));
+      }
+    }
   }
 }

@@ -1,0 +1,18 @@
+@use "variables";
+
+.footerDiv {
+  p {
+    font-size: 22px;
+    font-weight: 300;
+  }
+}
+
+/* For mobile screens*/
+@media only screen and (max-width:640px) {
+  .footerDiv {
+    p {
+      font-size: 20px;
+      font-weight: 200;
+    }
+  }
+}

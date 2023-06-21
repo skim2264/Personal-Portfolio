@@ -5,10 +5,12 @@
 .projectsDiv {
   @extend %sectionDivTemplate;
   height: 100%;
+  justify-content: center;
+  margin-bottom: 300px;
 }
 
 .projectHeader {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 /* Project Card */
@@ -18,14 +20,17 @@
 }
 
 .card {
-  width: 320px;
+  max-width: 700px;
   margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .imageContent, .cardContent {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 10px 14px;
 }
 
@@ -38,17 +43,18 @@
 .popupLinks {
   display: flex;
   gap: 20px;
+  a {
+    color: black;
+  }
 }
 
 .popupLink {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %centerTemplate;
   gap: 10px;
   height: 40px;
   width: 100px;
   background-color: variables.$highlight-color;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .popupLink:hover {

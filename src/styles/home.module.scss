@@ -20,8 +20,7 @@
   height: 100%;
   display: flex;
   align-items: center;
-  background-position: center;
-  filter: blur(5px);
+  background-position: center center;
   position: absolute;
   top: 0;
   left: 0;
@@ -30,57 +29,79 @@
   transition: filter 0.3s ease-in-out;
 }
 
-.blurred {
-  filter: blur(10px);
-}
+//blur background image on scroll
+// .blurred {
+//   filter: blur(10px);
+// }
 
-.line {
-  margin-top: 5px;
-  width: 0;
-  height: 4px;
-  margin-left: 0px;
-  background-color: variables.$highlight-color;
-  animation: increase 2s linear forwards;
-  animation-delay: 2.5s;
-}
-
-@keyframes increase {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
+//typing animation
 .typewriter {
   color: black;
   z-index: 1;
   padding: 40px;
-  padding-left: 20%;
-  //text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
-  background-color: white;
-  box-shadow: 7px 7px 7px 6px rgba(0, 0, 0, 1);
+  margin-left: 10%;
+  color: white;
+  width: 420px;
+
+  p:first-child {
+    color: variables.$second-highlight-color;
+    animation: 3s linear slideinOne;
+  }
 
   h1 {
-    font-size: 60px;
-    margin: 5px;
+    font-size: 70px;
+    margin: 5px 0px;
+    animation: 3s linear slideinTwo;
+  }
+  p:nth-child(4) {
+    animation: 4s linear slideinThree;
+  }
+  span {
+    color: variables.$second-highlight-color;
+  }
+}
+
+@keyframes slideinOne {
+  from {
+    transform: (translateX(-50vw));
+  } 
+  30% {
+    transform: (translateX(0));
+  }
+}
+
+@keyframes slideinTwo {
+  from {
+    transform: (translateX(-100vw));
+  } 
+  60% {
+    transform: (translateX(0));
+  }
+}
+
+@keyframes slideinThree {
+  from {
+    transform: (translateX(-300vw));
+  } 
+  to {
+    transform: (translateX(0));
   }
 }
 
 .typingText {
   overflow: hidden;
-  text-align: right;
   border-right: .15em solid variables.$highlight-color;
   white-space: nowrap;
   margin: auto;
   letter-spacing: .15em;
   font-size: 22px;
   opacity: 0;
+  color: grey;
   animation: 
-    typing 2.5s steps(40, end),
+    typing 1.5s steps(40, end),
     blink-caret .75s step-end infinite;
   animation-fill-mode: forwards;
+  animation-delay: 1.8s;
 }
 
 @keyframes typing {
@@ -100,4 +121,24 @@
 @keyframes blink-caret {
   0% {border-color: transparent}
   50% {border-color: variables.$highlight-color;}
+}
+
+//line increases after typewriter animation
+.line {
+  margin-top: 5px;
+  width: 0;
+  height: 4px;
+  margin-left: 0px;
+  background-color: variables.$highlight-color;
+  animation: increase 2s linear forwards;
+  animation-delay: 4s;
+}
+
+@keyframes increase {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }

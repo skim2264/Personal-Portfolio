@@ -39,7 +39,7 @@ function App() {
       <Contact></Contact>
       <div className="scrollTopDiv" style={{display: visible ? 'flex': 'none'}}>
         <button className="scrollTopButton" id="scrollTopButton" onClick={scrollToTop}>
-          <FontAwesomeIcon icon={icon({name:'angles-up'})}/>
+          <FontAwesomeIcon icon={icon({name:'chevron-up'})}/>
         </button>
         <p>Top</p>
       </div>

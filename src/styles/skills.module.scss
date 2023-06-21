@@ -8,6 +8,11 @@ h1 {
 .skillsContainerDiv {
   @extend %sectionDivTemplate;
   height: 100vh;
+  margin-bottom: 300px;
+
+  h1 {
+    font-size: 60px;
+  }
 }
 
 .skillsDiv {
@@ -22,27 +27,37 @@ h1 {
 }
 
 .skillHeader {
-  border-bottom: 5px solid variables.$highlight-color;
-  padding: 10px 0px;
+  padding: 10px;
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Add a pseudo-element ::after to create the glowing effect */
+.skillHeader::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Adjust the value to control the position of the glowing border */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height of the glowing border */
+  background-color: variables.$second-highlight-color; /* Adjust the color of the glowing border */
+  box-shadow: 0 0 5px 2px variables.$second-highlight-color; /* Adjust the glow effect properties */
 }
 
 .skillIcon {
   width: 20px;
-  filter: grayscale(100%);
+  filter: brightness(0) invert(1);
 }
 
 .skillOtherDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centerTemplate;
   gap: 20px;
 }
 
 .icons {
-  display: flex;
+  @extend %centerTemplate;
   gap: 8px;
-  justify-content: center;
-  align-items: center;
 }
 
 

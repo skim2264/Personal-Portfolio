@@ -3,10 +3,22 @@
 body, html, #root {
   margin: 0;
   padding: 0;
+  cursor: url('./assets/cursor.png'), auto;
+  background-color: black;
+  color: white;
 }
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+p {
+  font-size: 25px;
 }
 
 /* App Div */

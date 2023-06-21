@@ -2,26 +2,62 @@
 @use "variables";
 
 .aboutDiv {
-  @extend %sectionDivTemplate;
+  @extend %centerTemplate;
   height: 100vh;
+  background-color: black;
+  color: white;
+  padding-left: 80px;
+  
+  h1 {
+    font-size: 60px;
+    width: 100%;
+  }
 }
 
 .aboutMain {
   display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 100px;
 }
 
 .blurb {
-  width: 65%;
-  margin: 50px;
-  padding: 20px;
-  border: 1px solid black;
-  box-shadow: 19px 19px 2px 2px variables.$highlight-color,0px 0px 1px 0px rgba(0, 0, 0, 0.5);
+  //border: 1px solid black;
+  //box-shadow: 19px 19px 2px 2px variables.$highlight-color,0px 0px 1px 0px rgba(0, 0, 0, 0.5);
+  animation: 3s linear slideinOne;
+  text-align: justify;
+  margin-bottom: 20px;
 }
 
 .interests {
-  width: 35%;
-  margin: 50px;
-  background-color: variables.$highlight-color;
-  padding: 20px;
+  display: flex;
+  align-items: center;
   border-radius: 5px;
+  gap: 20px;
+  width: 100%;
+  
+  ul {
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    justify-content: space-evenly;
+    font-size: 25px;
+
+    li {
+      display: flex;
+      gap: 20px;
+      align-items: center;     
+      --fa-border-radius: 50%;
+      --fa-border-padding: 12px;
+      --fa-border-width: 1px;
+      --fa-border-color: rgba(46, 138, 138, 1);
+      --fa-inverse: rgba(46, 138, 138, 1);
+
+      .blueIcon {
+        filter: hue-rotate(50deg);
+      }
+    }
+  }
 }

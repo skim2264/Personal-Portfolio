@@ -22,8 +22,9 @@ const Home = () => {
       <div className={`${styles.homeMain} ${scrollPosition > 100 ? styles['blurred'] : ''}`}></div>
       <div className={styles.typewriter}>
         <p>&lt;title&gt;Hi, my name is&lt;title&gt;</p>
-        <h1>#Soojin Kim</h1>
-        <p className={styles.typingText}>&lt;Full Stack Developer/&gt;</p>
+        <h1>SOOJIN KIM</h1>
+        <p className={styles.typingText}>I will bring your ideas to LIFE</p>
+        <p>I am a <span>&lt;Full Stack Developer&gt;</span> with a passion to create new things. Welcome to my portfolio, let's create something remarkable together.</p>
         <div className={styles.line}></div>
       </div>
     </div>

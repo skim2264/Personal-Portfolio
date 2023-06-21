@@ -9,7 +9,7 @@
   background-color: black;
   color: white;
   h1 {
-    font-size: 60px;
+    font-size: variables.$comp-h1;
     margin-bottom: 40px;
     color: lighten(variables.$highlight-color, 10%);
   }

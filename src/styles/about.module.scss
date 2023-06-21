@@ -13,7 +13,7 @@
   padding-top: 110px;
   
   h1 {
-    font-size: 60px;
+    font-size: variables.$comp-h1;
     width: 100%;
     color: lighten(variables.$highlight-color, 10%);
     padding-right: 50px;

@@ -11,7 +11,7 @@
 
 .projectHeader {
   margin-bottom: 50px;
-  font-size: 60px;
+  font-size: variables.$comp-h1;
   color: lighten(variables.$highlight-color, 10%);
 }
 
@@ -26,6 +26,7 @@
   margin-bottom: 30px;
   display: flex;
   gap: 30px;
+  font-weight: 300;
 }
 
 .imageContent, .cardContent {

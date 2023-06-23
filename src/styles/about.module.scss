@@ -65,6 +65,9 @@
         filter: hue-rotate(50deg);
       }
     }
+    li:hover {
+      transform: translateY(-10px);
+    }
   }
 }
 

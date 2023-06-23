@@ -86,16 +86,12 @@ p {
 
 .glowing-circle {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background-color: white;
-  filter: blur(70px);
-  opacity: 0.8;
+  filter: blur(25px) opacity(10%);
   transition: transform 0.3s ease;
   transform: translate(-50%, -50%) scale(1);
 }
 
-.glowing-circle:hover {
-  transform: translate(-50%, -50%) scale(2);
-}

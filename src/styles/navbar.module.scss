@@ -41,15 +41,17 @@
   border-bottom: 2px solid variables.$highlight-color;
 }
 
-.logo {
+a.logo {
   font-family: variables.$main-font;
-  font-size: 40px;
+  font-size: 30px;
   transition: color 0.3s, text-shadow 0.3s, font-weight 0.3s;
-  font-weight: 300;
+  font-weight: 400;
+  color: rgb(83, 79, 79);
+  //text-shadow: -1px -1px 1px #777575;
 }
 
 .logo:hover {
-  text-shadow: 2px 0px 0px rgb(255, 255, 255); 
+  text-shadow: 2px 0px 0px rgb(134, 132, 132); 
 }
 
 /* For mobile screens*/

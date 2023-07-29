@@ -7,8 +7,16 @@ import library from "./library.png";
 import memory from "./memory.png";
 import calculator from "./calculator.png";
 import blog from "./blog.png";
+import mood from "./mood.png";
 
 export const myProjects = [
+  {
+    title: "Mood App",
+    img: mood,
+    github: "https://github.com/skim2264/Mood-App",
+    demo: "https://mood-app-production.up.railway.app/",
+    description: "A mood tracking app using an API backend."
+  },
   {
     title: "Blog API",
     img: blog,

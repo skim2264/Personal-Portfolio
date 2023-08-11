@@ -61,3 +61,8 @@ p {
   font-size: 16px;
   cursor: pointer;
 }
+
+//For Projects Tabs
+.activeTab {
+  border-bottom: 2px solid variables.$heading-color;
+}

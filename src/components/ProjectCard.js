@@ -48,7 +48,7 @@ const ProjectCard = (props) => {
   return (
     <div className={styles.card}>
       <div className={styles.cardContent}>
-        <h3>{title}</h3>
+        <h3 className={styles.cardTitle}>{title}</h3>
         <p>{description}</p>
         <div className={styles.skillIcons}>
           {skills.map((skill) => {

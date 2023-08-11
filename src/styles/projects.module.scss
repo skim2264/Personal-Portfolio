@@ -33,6 +33,7 @@
   p {
     padding-bottom: 8px;
     position: relative;
+    text-align: right;
   }
 
   p:hover {
@@ -80,18 +81,12 @@
   font-size: 30px;
 }
 
-.cardImg {
-  height: 400px;
-  width: 500px;
-  object-fit: cover;
-  object-position: top;
-}
-
 .skillIcons {
   display: flex;
   align-items: center;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .skillIcon {
@@ -127,6 +122,14 @@
 /* For mobile screens*/
 @media only screen and (max-width:800px) {
   .projectsDiv {
+    padding-left: 0px;
+    padding-right: 0px;
+
+    .projectsDivContainer {
+      grid-template-columns: 90px auto;
+      padding: 0px 10px;
+    }
+
     .projectHeader {
       font-size: variables.$mobile-h1;
       margin-top: 0px;
@@ -139,12 +142,20 @@
       flex-direction: column;
       max-width: 250px;
       margin-bottom: 10px;
+      padding: 20px 0px 20px 30px;
+
       h3 {
         margin: 0px;
       }
       p {
         margin-top: 10px;
         margin-bottom: 20px;
+      }
+      .skillIcons {
+        gap: 10px;
+      }
+      .skillIcon {
+        width: variables.$mobile-p;
       }
     }
   }

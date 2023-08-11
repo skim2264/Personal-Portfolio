@@ -8,7 +8,7 @@ const Projects = () => {
   const [display, setDisplay] = useState(myProjects[0]);
   const [active, setActive] = useState(myProjects[0].title);
 
-  const setProjectDisplay = (e, project) => {
+  const setProjectDisplay = (project) => {
     setDisplay(project);
     document.getElementById(active).classList.remove("activeTab");
     const el = document.getElementById(project.title);
@@ -18,8 +18,7 @@ const Projects = () => {
 
   useEffect(() => {
     document.getElementById(active).classList.add("activeTab");
-  },[]);
-
+  },[active]);
 
   return (
     <div id="projects" className={styles.projectsDiv}>
@@ -27,7 +26,7 @@ const Projects = () => {
       <div className={styles.projectsDivContainer}>
         <div className={styles.projectsMenu}>
           {myProjects.map((project) => {
-            return <p onClick={(e) => setProjectDisplay(e, project)} key={project.title} id={project.title}>{project.title}</p>
+            return <p onClick={() => setProjectDisplay(project)} key={project.title} id={project.title}>{project.title}</p>
           })}
         </div>
         <ProjectCard key={display.title} title={display.title} github={display.github} demo={display.demo} description={display.description} skills={display.skills}/>

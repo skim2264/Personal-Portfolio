@@ -46,14 +46,14 @@ const displayIcon = (iconName) => {
 const ProjectCard = (props) => {
   const {title, github, demo, description, skills} = props;
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} card`}>
       <div className={styles.cardContent}>
         <h3 className={styles.cardTitle}>{title}</h3>
         <p>{description}</p>
         <div className={styles.skillIcons}>
           {skills.map((skill) => {
-          return <p>{displayIcon(skill)}</p>
-        })}
+            return <p>{displayIcon(skill)}</p>
+          })}
         </div>
         <div className={styles.popupLinks}>
           <a href={github} target="_blank" rel="noreferrer" className={styles.popupLink}>Github</a>

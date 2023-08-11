@@ -6,45 +6,64 @@
   @extend %sectionDivTemplate;
   height: 100%;
   justify-content: center;
+  align-items: center;
   margin-bottom: 300px;
 }
 
 .projectHeader {
   margin-bottom: 50px;
   font-size: variables.$comp-h1;
-  color: lighten(variables.$highlight-color, 10%);
+  color: variables.$heading-color;
 }
 
 /* Project Card */
-.projectImg {
-  height: 500px;
-  object-fit: contain;
-}
-
 .card {
-  max-width: 700px;
-  margin-bottom: 30px;
+  max-width: 1000px;
+  margin-bottom: 40px;
   display: flex;
+  align-items: center;
   gap: 30px;
   font-weight: 300;
-}
-
-.imageContent, .cardContent {
-  display: flex;
+  text-align: left;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 10px 14px;
+  padding: 20px 60px;
+  border-left: 1px solid black;
+  margin-right: 500px;
 }
 
-.cardImage, .cardImg {
-  height: 100%;
-  width: 100%;
+.card:nth-child(odd) {
+  flex-direction: row-reverse;
+  text-align: right;
+  border-left: none;
+  border-right: 1px solid black;
+  margin-right: 0px;
+  margin-left: 500px;
+}
+
+.cardImg {
+  height: 400px;
+  width: 500px;
   object-fit: cover;
+  object-position: top;
+}
+
+.skillIcons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skillIcon {
+  width: 25px;
+  //filter: brightness(0) invert(1);
+  filter: brightness(0);
 }
 
 .popupLinks {
   display: flex;
+  justify-content: center;
   gap: 20px;
   a {
     color: black;
@@ -55,13 +74,14 @@
   @extend %centerTemplate;
   gap: 10px;
   height: 40px;
-  width: 100px;
-  background-color: variables.$highlight-color;
-  border-radius: 10px;
+  width: 120px;
+  border: 1px solid variables.$heading-color;
+  border-radius: 20px;
+  padding: 5px;
 }
 
 .popupLink:hover {
-  color: white;
+  border: none;
 }
 
 /* For mobile screens*/

@@ -30,21 +30,21 @@ const Contact = () => {
       <h1>Contact Me</h1>
       <div className={styles.contactLinks}>
         <a href="mailto:soojinkk98@gmail.com" className={styles.contactLink}>
-          <FontAwesomeIcon icon={icon({name:"envelope"})} />
+          <FontAwesomeIcon icon={icon({name:"envelope"})} className={styles.contactIcon}/>
           <p>soojinkk98@gmail.com</p>
         </a>
         <a href="https://www.linkedin.com/in/soojin-kim1" className={styles.contactLink} target="_blank" rel="noreferrer">
-          <FontAwesomeIcon icon={icon({name:"linkedin", style:'brands'})} />
+          <FontAwesomeIcon icon={icon({name:"linkedin", style:'brands'})} className={styles.contactIcon}/>
           <p>LinkedIn</p>
 
         </a>
         <a href="https://github.com/skim2264" className={styles.contactLink} target="_blank" rel="noreferrer">
-          <FontAwesomeIcon icon={icon({name:"github", style:'brands'})} />
+          <FontAwesomeIcon icon={icon({name:"github", style:'brands'})} className={styles.contactIcon}/>
           <p>Github</p>
 
         </a>
         <a href="https://flowcv.com/resume/9j5rnwqsng" className={styles.contactLink} target="_blank" rel="noreferrer">
-          <FontAwesomeIcon icon={icon({name:"file"})} />
+          <FontAwesomeIcon icon={icon({name:"file"})} className={styles.contactIcon}/>
           <p>Resume</p>
 
         </a>

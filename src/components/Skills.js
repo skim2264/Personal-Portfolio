@@ -19,13 +19,11 @@ const Skills = () => {
       </div>
       <div className={styles.skillsDiv}>
         <div className={styles.iconDiv}>
-          <div className={styles.icons}>
-            <img src={typescriptIcon} alt="Typescript icon" className={styles.skillIcon}/>
-          </div>
+          <FontAwesomeIcon icon={icon({name:'js', style:'brands'})} size="5x" className={styles.skillIcon}></FontAwesomeIcon>
           <p className={styles.skillName}>Javascript</p>
         </div>
         <div className={styles.iconDiv}>
-        <img src={typescriptIcon} alt="Typescript icon" className={styles.skillIcon}/>
+          <img src={typescriptIcon} alt="Typescript icon" className={styles.skillIcon}/>
           <p className={styles.skillName}>Typescript</p>
         </div>
         <div className={styles.iconDiv}>
@@ -39,7 +37,7 @@ const Skills = () => {
           <p className={styles.skillName}>CSS</p>
         </div>
         <div className={styles.iconDiv}>
-        <FontAwesomeIcon icon={icon({name:'sass', style:'brands'})} size="5x" className={styles.skillIcon}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={icon({name:'sass', style:'brands'})} size="5x" className={styles.skillIcon}></FontAwesomeIcon>
           <p className={styles.skillName}>Sass</p>
         </div>
         <div className={styles.iconDiv}>

@@ -13,7 +13,7 @@ h1 {
   h1 {
     font-size: variables.$comp-h1;
     margin-bottom: 80px;
-    color: lighten(variables.$highlight-color, 10%);
+    color: variables.$heading-color;
     
   }
 }
@@ -28,11 +28,15 @@ h1 {
 
 .skillIcon {
   width: 50px;
-  filter: brightness(0) invert(1);
+  //use for dark mode?
+  //filter: brightness(0) invert(1);
+  filter: brightness(0);
 }
 
 .skillName {
   display: none;
+  color: variables.$heading-color-dark;
+  font-weight: 500;
 }
 
 .iconDiv {
@@ -44,11 +48,10 @@ h1 {
   .skillName {
     display: flex;
     position: absolute;
-    text-shadow: 1px black;
-    font-weight: 100;
+    text-shadow: 2px variables.$background-color;
   }
   .skillIcon {
-    opacity: 0.3;
+    opacity: 0.2;
   }
 }
 
@@ -82,10 +85,10 @@ h1 {
     .skillName {
       display: flex;
       text-shadow: 1px black;
-      font-weight: 100;
+      font-weight: 300;
       margin: 0px;
       margin-top: 5px;
-      font-size: 20px;
+      font-size: variables.$mobile-p;
     }
     .skillIcon {
       font-size: 40px;

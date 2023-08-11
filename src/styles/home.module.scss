@@ -11,12 +11,6 @@
 }
 
 .homeMain {
-  background-image: url("../assets/homeBackground.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  -webkit-background-size: cover;  
-  -moz-background-size: cover;
-  -o-background-size: cover;
   height: 100%;
   display: flex;
   align-items: center;
@@ -31,63 +25,35 @@
 
 //typing animation
 .typewriter {
-  color: black;
+  color: variables.$heading-color;
   z-index: 1;
   padding: 40px;
   margin-left: 10%;
   margin-top: -200px;
-  color: white;
   width: 420px;
 
   p:first-child {
-    color: variables.$second-highlight-color;
-    animation: 3s linear slideinOne;
+    color: variables.$text-color;
     margin-bottom: 0px;
   }
 
   h1 {
     font-size: 60px;
     margin: 5px 0px;
-    animation: 3s linear slideinTwo;
   }
-  p:nth-child(4) {
-    animation: 4s linear slideinThree;
-  }
+
   span {
-    color: variables.$second-highlight-color;
+    font-weight: 300;
   }
 }
 
-@keyframes slideinOne {
-  from {
-    transform: (translateX(-50vw));
-  } 
-  30% {
-    transform: (translateX(0));
-  }
-}
-
-@keyframes slideinTwo {
-  from {
-    transform: (translateX(-100vw));
-  } 
-  60% {
-    transform: (translateX(0));
-  }
-}
-
-@keyframes slideinThree {
-  from {
-    transform: (translateX(-300vw));
-  } 
-  to {
-    transform: (translateX(0));
-  }
+.nameDiv {
+  width: 300px;
 }
 
 .typingText {
   overflow: hidden;
-  border-right: .15em solid variables.$highlight-color;
+  border-right: .15em solid variables.$text-color;
   white-space: nowrap;
   margin: auto;
   letter-spacing: .15em;
@@ -98,10 +64,10 @@
     typing 1.5s steps(40, end),
     blink-caret .75s step-end infinite;
   animation-fill-mode: forwards;
-  animation-delay: 1.8s;
+  animation-delay: 1.2s;
 }
 
-@keyframes typing {
+ @keyframes typing {
   0% {
     width:0;
   }
@@ -111,14 +77,14 @@
   to {
     width: 100%; 
     opacity: 1;   
-    border-right: .15em solid variables.$highlight-color;
+    border-right: .15em solid variables.$text-color;
   }
 }
 
 @keyframes blink-caret {
   0% {border-color: transparent}
-  50% {border-color: variables.$highlight-color;}
-}
+  50% {border-color: variables.$text-color;}
+} 
 
 //line increases after typewriter animation
 .line {
@@ -153,42 +119,10 @@
 
     .typewriter {
       margin-left: 0;
-
-      p:first-child {
-        animation: 2s linear slideinOne;
-      }
-    
-      h1 {
-        animation: 3s linear slideinTwo;
-      }
-      p:nth-child(4) {
-        animation: 5s linear slideinThree;
-      }
     }
 
-    .typingText {
-      animation-delay: 2s;
-    }
-
-    .line {
-      animation-delay: 5s;
-    }
-    @keyframes slideinTwo {
-      from {
-        transform: (translateX(-150vw));
-      } 
-      60% {
-        transform: (translateX(0));
-      }
-    }
-
-    @keyframes slideinThree {
-      from {
-        transform: (translateX(-400vw));
-      } 
-      90% {
-        transform: (translateX(0));
-      }
+    .nameDiv {
+      width: 245px;
     }
   }
 }

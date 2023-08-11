@@ -1,5 +1,5 @@
 import './App.scss';
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState} from "react";
 import Navbar from './components/Navbar';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
@@ -8,6 +8,7 @@ import Home from './components/Home';
 import About from './components/About';import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Footer from './components/Footer';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
+import 'animate.css';
 
 function App() {
   //top button appears on scroll
@@ -31,22 +32,6 @@ function App() {
 
   window.addEventListener('scroll', toggleVisible);
 
-  //background glows behind cursor
-  const containerRef = useRef(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
-
   return (
     <div className="app-div">
       <Navbar></Navbar>
@@ -56,16 +41,11 @@ function App() {
       <Projects></Projects>
       <Contact></Contact>
       <Footer></Footer>
-      <div className="scrollTopDiv" style={{display: visible ? 'flex': 'none'}}>
+      <div className="scrollTopDiv animate__animated animate__pulse animate__infinite animate__slower" style={{display: visible ? 'flex': 'none'}}>
         <button className="scrollTopButton" id="scrollTopButton" onClick={scrollToTop}>
-          <FontAwesomeIcon icon={icon({name:'chevron-up'})}/>
+          <FontAwesomeIcon icon={icon({name:'arrow-up'})}/>
+          <p>TO TOP</p>
         </button>
-      </div>
-      <div className="glowing-background" ref={containerRef}>
-        <div
-          className="glowing-circle"
-          style={{ top: mousePosition.y, left: mousePosition.x }}
-        ></div>
       </div>
     </div>
   );

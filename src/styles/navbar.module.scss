@@ -10,13 +10,12 @@
   justify-content: space-between;
   width: 100%;
   padding: 30px 0px;
-  background-color: black;
   position: sticky;
   top: 0px;
   height: 110px;
   z-index: 7;
   a {
-    color: white;
+    color: variables.$text-color;
   }
 }
 
@@ -38,7 +37,7 @@
 }
 
 .navLink:hover {
-  border-bottom: 2px solid variables.$highlight-color;
+  border-bottom: 2px solid variables.$text-color;
 }
 
 a.logo {
@@ -46,12 +45,11 @@ a.logo {
   font-size: 30px;
   transition: color 0.3s, text-shadow 0.3s, font-weight 0.3s;
   font-weight: 400;
-  color: rgb(83, 79, 79);
-  //text-shadow: -1px -1px 1px #777575;
+  color: variables.$heading-color;
 }
 
 .logo:hover {
-  text-shadow: 2px 0px 0px rgb(134, 132, 132); 
+  font-size: 31px;
 }
 
 /* For mobile screens*/
